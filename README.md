@@ -1,4 +1,4 @@
-# New Project
+# New Project ALIAS
 
 > ✨ Bootstrapped with Create Snowpack App (CSA).
 
