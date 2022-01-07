@@ -1,5 +1,3 @@
-import React, { FC } from 'react';
+import type { FC } from 'react'
 
-export const Welcome: FC = () => {
-  return <div>welcomePage </div>;
-};
+export const Welcome: FC = () => <div>welcomePage</div>

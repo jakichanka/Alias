@@ -1,28 +1,35 @@
-import React from 'react';
-import type { FC } from 'react';
+import { gsap } from 'gsap'
+import {
+  FC, useCallback, useEffect, useRef,
+} from 'react'
 
-import { Link, Outlet, useLocation } from 'react-router-dom';
+import { Link, Outlet, useLocation } from 'react-router-dom'
 
-import { TransitionGroup, CSSTransition } from 'react-transition-group';
+import { TransitionGroup, CSSTransition } from 'react-transition-group'
+import styled from 'styled-components'
+import { Header } from '~/components'
 
 export const WelcomeLayout: FC = () => {
-  const location = useLocation();
+  const location = useLocation()
+  const headerRef = useRef(null)
+  const contentRef = useRef(null)
 
-  console.log(location.key)
+  useEffect(() => {
+    gsap.to([headerRef.current, contentRef.current], { opacity: 1 })
+  })
+
   return (
     <>
-      <nav>
-        <Link to="rules">Rules</Link>
-        <br />
-        <Link to="/">Welcome</Link>
-      </nav>
-      <div>
+      <div style={{ opacity: 0 }} ref={headerRef}>
+        <Header />
+      </div>
+      <div style={{ opacity: 0 }} ref={contentRef}>
         <TransitionGroup component={null}>
-          <CSSTransition key={location.key} classNames="fade" timeout={300}>
+          <CSSTransition key={location.key} classNames='fade' timeout={300}>
             <Outlet />
           </CSSTransition>
         </TransitionGroup>
       </div>
     </>
-  );
-};
+  )
+}
