@@ -1,5 +1,3 @@
-import React, { FC } from 'react';
+import type { FC } from "react"
 
-export const Rules: FC = () => {
-  return <div>RulesPage</div>;
-};
+export const Rules: FC = () => <div>RulesPage</div>

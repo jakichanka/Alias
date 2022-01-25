@@ -1,5 +1,8 @@
 /** @type {import("snowpack").SnowpackUserConfig } */
 export default {
+  alias: {
+    "~": "./src",
+  },
   mount: {
     public: { url: '/', static: true },
     src: { url: '/dist' },
@@ -27,6 +30,6 @@ export default {
     /* ... */
   },
   buildOptions: {
-    /* ... */
+    jsxInject: 'import React from "react";'
   },
 };
