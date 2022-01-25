@@ -1,9 +1,9 @@
 // import original module declarations
-import 'styled-components';
+import "styled-components"
 
 // and extend them!
-declare module 'styled-components' {
-  export interface All {
-    [key]: string
-  }
+declare module "styled-components" {
+	export interface All {
+		[key: string]: string
+	}
 }

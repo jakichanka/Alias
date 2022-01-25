@@ -6,7 +6,6 @@
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended",
-    "plugin:@typescript-eslint/recommended",
     "standard",
     "prettier"
   ],
@@ -22,10 +21,18 @@
     "ecmaVersion": 2018,
     "sourceType": "module"
   },
-  "plugins": ["react", "@typescript-eslint"],
+  "plugins": ["react", "@typescript-eslint", "prettier"],
   "rules": {
+    "prettier/prettier": ["error"],
+    "no-use-before-define": "off",
+    "@typescript-eslint/no-use-before-define": ["error"],
+    "react/react-in-jsx-scope": "off",
     "no-shadow": "off",
     "@typescript-eslint/no-shadow": ["error"],
-    "max-len": ["error", { "code": 80 }]
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
   }
 }

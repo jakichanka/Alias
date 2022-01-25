@@ -1,2 +1,2 @@
-export * from './Rules';
-export * from './Welcome';
+export * from "./Rules"
+export * from "./Welcome"
