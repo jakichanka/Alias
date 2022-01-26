@@ -1,1 +1,1 @@
-export * from "./FormAntd"
+export * from "./FormAntd";

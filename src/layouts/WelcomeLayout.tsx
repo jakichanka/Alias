@@ -1,19 +1,19 @@
-import { gsap } from "gsap"
-import { FC, useEffect, useRef } from "react"
+import { gsap } from "gsap";
+import { FC, useEffect, useRef } from "react";
 
-import { Outlet, useLocation } from "react-router-dom"
+import { Outlet, useLocation } from "react-router-dom";
 
-import { TransitionGroup, CSSTransition } from "react-transition-group"
-import { Header } from "~/components"
+import { TransitionGroup, CSSTransition } from "react-transition-group";
+import { Header } from "~/components";
 
 export const WelcomeLayout: FC = () => {
-	const location = useLocation()
-	const headerRef = useRef(null)
-	const contentRef = useRef(null)
+	const location = useLocation();
+	const headerRef = useRef(null);
+	const contentRef = useRef(null);
 
 	useEffect(() => {
-		gsap.to([headerRef.current, contentRef.current], { opacity: 1 })
-	})
+		gsap.to([headerRef.current, contentRef.current], { opacity: 1 });
+	});
 
 	return (
 		<>
@@ -28,5 +28,5 @@ export const WelcomeLayout: FC = () => {
 				</TransitionGroup>
 			</div>
 		</>
-	)
-}
+	);
+};
