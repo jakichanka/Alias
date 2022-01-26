@@ -24,7 +24,14 @@ export const PostItem: FC<IProps> = ({ delay, content, idx }) => {
 	});
 
 	return (
-		<div ref={ref} style={{ textAlign: "center", backgroundColor: "red", filter: `brightness(${0.5 + idx % 2 === 0 ? idx / 100 : idx / 5})` }}>
+		<div
+			ref={ref}
+			style={{
+				textAlign: "center",
+				backgroundColor: "red",
+				filter: `brightness(${0.5 + (idx % 2) === 0 ? idx / 100 : idx / 5})`,
+			}}
+		>
 			{content}
 		</div>
 	);

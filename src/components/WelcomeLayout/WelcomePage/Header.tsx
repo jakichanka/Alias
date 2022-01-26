@@ -1,6 +1,6 @@
-import React from "react"
-import { Link } from "react-router-dom"
-import styled from "styled-components"
+import React from "react";
+import { Link } from "react-router-dom";
+import styled from "styled-components";
 
 const Wrapper = styled.div`
 	text-align: center;
@@ -9,13 +9,13 @@ const Wrapper = styled.div`
 	margin: 0 auto;
 	display: grid;
 	grid-template-columns: 200px 1fr 200px;
-`
+`;
 
 const Menu = styled.ul`
 	display: grid;
 	grid-gap: 10px;
 	grid-template-columns: repeat(3, 1fr);
-`
+`;
 
 const MenuItem = styled.li`
 	list-style-type: none;
@@ -23,7 +23,7 @@ const MenuItem = styled.li`
 	& a {
 		text-decoration: none;
 	}
-`
+`;
 
 export function Header() {
 	return (
@@ -44,5 +44,5 @@ export function Header() {
 				<div>Buttons</div>
 			</Wrapper>
 		</header>
-	)
+	);
 }
